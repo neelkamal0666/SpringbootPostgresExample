@@ -31,7 +31,7 @@ public class BanksServices {
 
     //Method to get the list of all branches of a city of a bank
     public List<BranchesDTO> branchesByNameAndCity(String name, String city) throws Exception {
-        List<BranchesDomain> branchesDomains = this.branchesRepository.findByCityAndBank_Name(city, name);
+        List<BranchesDomain> branchesDomains = this.branchesRepository.findByCityAndBank_Name(city.toUpperCase(), name.toUpperCase());
         BranchMapper mapper = Mappers.getMapper(BranchMapper.class);
         return mapper.branchesToDTOs(branchesDomains);
     }
