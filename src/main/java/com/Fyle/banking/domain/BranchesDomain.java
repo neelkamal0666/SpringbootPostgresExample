@@ -6,7 +6,7 @@ import org.hibernate.annotations.NotFoundAction;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "branch")
+@Table(name = "bank_branches")
 public class BranchesDomain {
     private static final long serialVersionUID = 1L;
 
